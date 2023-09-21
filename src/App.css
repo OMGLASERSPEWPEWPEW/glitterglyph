@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  width: calc(2*100vw);
+  position: relative;
+  overflow-x: hidden;
+  
+  
+  /* width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  border: 2px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tile {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#tile-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.header, .navbar, .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  margin: 0 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 40px;
+  background-color: #f3a0f0; /* Adjust color as needed */
+}
+
+.feed {
+  width: 100%;
+  height: calc(60% - 0vh);
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.content-block {
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.botmenu {
+  max-width: 100%; /* This limits the width of the botmenu */
+  margin: 0 auto; /* This centers the botmenu */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+
+@media (min-height: 768px) and (min-width: 400px) {
+  .app {
+    max-height: 768px;
+    max-width: calc(2*400px);
+    margin: 0 auto;
   }
 }
